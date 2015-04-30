@@ -1,0 +1,230 @@
+/* latin */
+@font-face {
+  font-family: 'Trade Winds';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Trade Winds'), local('TradeWinds'), url(http://fonts.gstatic.com/s/tradewinds/v5/P7L1H4TWVDNJivDGg_--QI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Amaranth';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Amaranth'), url(http://fonts.gstatic.com/s/amaranth/v6/No9yO-s63zoPZDtAqBg6OfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+    font-family: '3dumbregular';
+    src: url('3Dumb-webfont.eot');
+    src: url('3Dumb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('3Dumb-webfont.woff') format('woff'),
+         url('3Dumb-webfont.ttf') format('truetype'),
+         url('3Dumb-webfont.svg#3dumbregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	max-width: 1000px;
+	min-height: 1000px;
+	margin: 0 auto;
+}
+
+header + h2 {
+	text-align: center;
+	color: #666633;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+h2 {
+	color: #666633;
+	margin-top: 70px;
+	margin-bottom: 30px;
+	margin-left: 20px;
+
+}
+
+p {
+	color: #666633;
+	margin-left: 20px;
+	margin-right: 20px;
+	line-height: 30px;
+}
+
+blockquote {
+  border-left: 10px solid #666633;
+  color: #666633;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  line-height: 30px;
+}
+blockquote:before {
+  color: #666633;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote:after {
+  color: #666633;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-left: 0.20em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+#content {
+	background-color: #f6f0e8;
+	min-height: 1250px;
+	margin-bottom: 100px;
+	border-radius: 10px;
+}
+
+.end {
+	height: 100px;
+}
+p + nav {
+	border-bottom: none;
+	margin-top: 30px;
+}
+
+nav {
+	border-bottom: 1px solid #666633;
+}
+
+nav ul {
+	font-family: '3dumbregular';
+	text-align: center;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+nav a{
+	text-decoration: none;
+	color: #666633;
+}
+
+nav li {
+	display: inline-block;
+	width: 30%;
+	
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	-webkit-transition:All 1s ;
+    -moz-transition:All 1s ;
+    -o-transition:All 1s ;
+}
+
+nav li:nth-child(odd):hover {
+	font-size: 31px;
+	-webkit-transform: rotate(-2deg) scale(1.2);
+    -moz-transform: rotate(-2deg) scale(1.2);
+    -o-transform: rotate(-2deg) scale(1.2);
+}
+
+nav li:nth-child(even):hover {
+	font-size: 31px;
+	-webkit-transform: rotate(2deg) scale(1.2);
+    -moz-transform: rotate(2deg) scale(1.2);
+    -o-transform: rotate(2deg) scale(1.2);
+}
+
+/*Now the styles*/
+* {
+	margin: 0; 
+	padding: 0;
+}
+body {
+	
+	font-family: arial, verdana, tahoma;
+}
+
+.accordian + p {
+	text-align: center;
+}
+
+/*Time to apply widths for accordian to work
+Width of image = 640px
+total images = 5
+so width of hovered image = 640px
+width of un-hovered image = 40px - you can set this to anything
+so total container width = 640 + 40*4 = 800px;
+default width = 800/5 = 160px;
+*/
+
+.accordian {
+	width: 990px; height: 320px;
+	overflow: hidden;
+	border-radius: 10px;
+	/*Time for some styling*/
+	margin: 0 auto;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+	width: 2000px;
+	/*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+	position: relative;
+	display: block;
+	width: 200px;
+	float: left;
+	
+	border-left: 1px solid #888;
+	
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	
+	/*Transitions to give animation effect*/
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	/*If you hover on the images now you should be able to 
+	see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {width: 90px;}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {width: 640px;}
+
+
+.accordian li img {
+	display: block;
+}
+
+/*Image title styles*/
+.image_title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; bottom: 0;	
+	width: 640px;	
+
+}
+.image_title a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 16px;
+}
